@@ -1,0 +1,21 @@
+[package]
+name = "restore"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "restore"
+path = "src/lib.rs"
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "restore"
+path = "src/bin/main.rs"
+
+[dependencies]
+libc = "0.2"
+nix = "0.23.1"
+pyo3 = { version = "0.23.1", features = ["auto-initialize"] }
+libtcp = { path = "../third_party/libtpa/bindings/", features = ["standalone"] }
+serde = { version = "1.0.197", features = ["derive"] }

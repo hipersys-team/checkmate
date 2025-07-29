@@ -1,0 +1,25 @@
+data_config:
+  vocab_size: 50257
+  total_tokens: 100000
+  block_size: 2048
+  train_split: 0.9
+  truncate: 0.05
+gpt_config:
+  n_layer: 32
+  n_head: 32
+  n_embd: 4096
+trainer_config:
+  max_epochs: 10
+  batch_size: 1
+  data_loader_workers: 4
+  grad_norm_clip: 1.0
+  snapshot_path: gpt_snapshot.pt
+  save_every: 3
+  use_amp: True
+optimizer_config:
+  weight_decay: 0.1
+  learning_rate: 0.0003
+
+hydra:
+  run:
+    dir: ./

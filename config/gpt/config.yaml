@@ -1,0 +1,10 @@
+defaults:
+  - _self_
+  - data
+  - model: gpt3_xl
+  - trainer
+  - optimizer
+
+hydra:
+  run:
+    dir: ./

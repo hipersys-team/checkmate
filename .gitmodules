@@ -1,0 +1,18 @@
+[submodule "third_party/nccl"]
+	path = third_party/nccl
+	url = git@github.com:ankitbhrdwj/nccl.git
+[submodule "third_party/pytorch"]
+	path = third_party/pytorch
+	url = git@github.com:ankitbhrdwj/pytorch.git
+[submodule "third_party/nccl-plugin"]
+	path = third_party/nccl-plugin
+	url = git@github.com:ankitbhrdwj/nccl-plugin.git
+[submodule "third_party/libtpa"]
+	path = third_party/libtpa
+	url = git@github.com:ankitbhrdwj/libtpa.git
+[submodule "third_party/torchtitan"]
+	path = third_party/torchtitan
+	url = git@github.com:Flasew/torchtitan.git
+[submodule "third_party/nullfsvfs"]
+	path = third_party/nullfsvfs
+	url = git@github.com:abbbi/nullfsvfs.git

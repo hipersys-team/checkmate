@@ -1,0 +1,6 @@
+data_config:
+  vocab_size: 50257
+  total_tokens: 16384 
+  block_size: 2048
+  train_split: 0.9
+  truncate: 0.05

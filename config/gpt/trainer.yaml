@@ -1,0 +1,11 @@
+trainer_config:
+  max_epochs: 1
+  batch_size: 1
+  data_loader_workers: 4
+  grad_norm_clip: 1.0
+  snapshot_path_nosave: snapshot_sinkhole
+  snapshot_path_save: snapshot
+  save_every: 5
+  use_amp: False
+  snapshot: ASYNC
+  run_up_to_iter: 10
