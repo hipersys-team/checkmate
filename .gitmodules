@@ -16,3 +16,7 @@
 [submodule "third_party/nullfsvfs"]
 	path = third_party/nullfsvfs
 	url = git@github.com:abbbi/nullfsvfs.git
+[submodule "third_party/gemini"]
+	path = third_party/gemini
+	url = git@github.com:j-carin/gemini.git
+	branch = ds016
