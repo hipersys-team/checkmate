@@ -9,7 +9,7 @@ Figure 6 demonstrates the performance comparison between different checkpointing
 - **Torch async checkpoint** - PyTorch's built-in asynchronous checkpointing
 - **CheckFreq** - Frequency-based checkpointing optimization
 - **Checkmate** - Our proposed checkpointing system with network-aware optimizations
- 
+
 The experiments cover both language models (GPT, LLaMA) and vision models across different network stacks (InfiniBand, DPDK).
 
 *Note:* While we include evaluation results for [Gemini (OSDI '23)](https://dl.acm.org/doi/10.1145/3600006.3613145) in Figure 6, its source code is not available in this repository at the request of its authors. To replicate Gemini results, please contact the authors directly.
