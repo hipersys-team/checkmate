@@ -9,9 +9,10 @@ Figure 6 demonstrates the performance comparison between different checkpointing
 - **Torch async checkpoint** - PyTorch's built-in asynchronous checkpointing
 - **CheckFreq** - Frequency-based checkpointing optimization
 - **Checkmate** - Our proposed checkpointing system with network-aware optimizations
-- **Gemini** - Alternative checkpointing approach
-
+ 
 The experiments cover both language models (GPT, LLaMA) and vision models across different network stacks (InfiniBand, DPDK).
+
+*Note:* While we include evaluation results for [Gemini (OSDI '23)](https://dl.acm.org/doi/10.1145/3600006.3613145) in Figure 6, its source code is not available in this repository at the request of its authors. To replicate Gemini results, please contact the authors directly.
 
 ## Prerequisites
 
@@ -110,17 +111,6 @@ Once the infrastructure is set up, run the Checkmate experiments:
 ./run_checkmate.sh            # Vision models with Checkmate
 ```
 
-### 3. Gemini Runs
-
-Gemini experiments use a different checkpointing system and require separate setup.
-
-#### Setup and Execution
-```bash
-# Follow instructions in the Gemini-specific README
-cd third_party/gemini/
-# See README.md for detailed setup and execution instructions
-```
-
 ## Network Stack Types
 
 The experiments compare performance across different network configurations:
@@ -136,7 +126,7 @@ The experiments compare performance across different network configurations:
 ## Execution Order
 
 For accurate results, follow this execution order:
-
+p
 1. **Setup Phase**
    ```bash
    # Set up nullfs sinkhole
@@ -159,12 +149,6 @@ For accurate results, follow this execution order:
    ./run_*_async.sh
    ./run_*_checkfreq.sh
    ./run_*_checkmate.sh  # Only after infrastructure setup
-   ```
-
-4. **Alternative Approaches**
-   ```bash
-   # Run Gemini experiments
-   cd third_party/gemini/ && # follow README.md
    ```
 
 ## Data Collection
