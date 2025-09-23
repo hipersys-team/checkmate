@@ -1,7 +1,5 @@
 #![allow(dead_code)]
 #![feature(test)]
-#![feature(stdarch_x86_avx512)]
-#![feature(avx512_target_feature)]
 #![feature(mpmc_channel)]
 
 pub mod chunk_info;

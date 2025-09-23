@@ -105,7 +105,7 @@ impl GradBucket {
             .unwrap());
     }
 
-    pub fn write_guard(&self) -> std::sync::RwLockWriteGuard<Vec<u8>> {
+    pub fn write_guard(&self) -> std::sync::RwLockWriteGuard<'_, Vec<u8>> {
         self.buffer.write().unwrap()
     }
 
@@ -135,7 +135,7 @@ pub fn parallel_memcpy(src: &[u8], dst: &mut [u8]) {
     );
 
     assert!(
-        dst.as_ptr() as usize % 16 == 0,
+        (dst.as_ptr() as usize).is_multiple_of(16),
         "Destination must be 16-byte aligned"
     );
     let chunk_size = unsafe { libc::sysconf(libc::_SC_PAGESIZE) as usize };

@@ -19,10 +19,7 @@ fn register_connection(sid: i32) -> Result<(), std::io::Error> {
         libtcp::ffi::tpa_event_ctrl(sid, libtcp::ffi::TPA_EVENT_CTRL_ADD as i32, &mut event)
     } {
         0 => Ok(()),
-        _ => Err(std::io::Error::new(
-            std::io::ErrorKind::Other,
-            "tpa_event_ctrl failed",
-        )),
+        _ => Err(std::io::Error::other("tpa_event_ctrl failed")),
     }
 }
 

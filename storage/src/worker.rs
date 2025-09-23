@@ -158,10 +158,7 @@ pub fn tcp_socket_info_get(sid: i32) -> Result<tpa_sock_info, std::io::Error> {
     let info = uninit.as_mut_ptr();
     match unsafe { tpa_sock_info_get(sid, info) } {
         0 => Ok(unsafe { uninit.assume_init() }),
-        _ => Err(std::io::Error::new(
-            std::io::ErrorKind::Other,
-            "tpa_sock_info_get failed",
-        )),
+        _ => Err(std::io::Error::other("tpa_sock_info_get failed")),
     }
 }
 
@@ -185,10 +182,7 @@ fn register_connection(sid: i32) -> Result<(), std::io::Error> {
         libtcp::ffi::tpa_event_ctrl(sid, libtcp::ffi::TPA_EVENT_CTRL_ADD as i32, &mut event)
     } {
         0 => Ok(()),
-        _ => Err(std::io::Error::new(
-            std::io::ErrorKind::Other,
-            "tpa_event_ctrl failed",
-        )),
+        _ => Err(std::io::Error::other("tpa_event_ctrl failed")),
     }
 }
 

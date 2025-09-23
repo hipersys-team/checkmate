@@ -125,10 +125,10 @@ fn schedule_coll_tasks_to_plan(
     let chunk_size = (nccl_buff_size / NCCL_STEPS) * (NCCL_STEPS / 2) / GRAIN_SIZE * GRAIN_SIZE;
 
     dev_work.channel_lo = channel_id;
-    dev_work.channel_hi = (channel_id + n_channels - 1) as i64;
-    dev_work.cbd.count_lo = count_lo as i64;
-    dev_work.cbd.count_mid = count_mid as i64;
-    dev_work.cbd.count_hi = count_hi as i64;
+    dev_work.channel_hi = channel_id + n_channels - 1;
+    dev_work.cbd.count_lo = count_lo;
+    dev_work.cbd.count_mid = count_mid;
+    dev_work.cbd.count_hi = count_hi;
 
     if count_lo != 0 {
         dev_work.cbd.chunk_grains_lo = chunk_size / GRAIN_SIZE;
