@@ -2,8 +2,8 @@
 1. Clone the repository
 
 ```
-git clone git@github.com:Flasew/innet_ckpt.git
-cd innet_ckpt
+git clone git@github.com:hipersys-team/checkmate.git
+cd checkmate
 git submodule update --init --recursive
 ```
 
