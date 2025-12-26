@@ -1,4 +1,8 @@
-# Install packages
+# Checkmate
+![Status](https://img.shields.io/badge/Version-Experimental-green.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Install packages
 1. Clone the repository
 
 ```
@@ -14,7 +18,7 @@ chmod a+x script/*.sh
 script/build.sh
 ```
 
-# How to run
+## How to run
 
 Add Hugepages for DPDK
 
@@ -40,7 +44,7 @@ Information can be found in [storage](storage/README.md).
 > To specify the number of training nodes please set environment variable
 `NUM_TRAINING` to the desired number.
 
-# Manual Build
+## Manual Build
 
 Most steps are automated in [build.sh](script/build.sh) script. However, if you want to build
 manually, follow the steps below.
